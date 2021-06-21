@@ -88,7 +88,7 @@ var trivia=[
 
 //Taking and checking UserName
 function tandcUN(){
-  userName=readlineSync.question("State your name:\n")
+  userName=readlineSync.question("\nState your name:\n")
   if(userName==""){
   log(chalk.yellow("\nPlease Enter a proper Name")+emoji.get(":open_mouth:"))
   tandcUN();
@@ -138,7 +138,7 @@ if(response===false){
     var op=trivia[i].options;
     var ans=trivia[i].answer;
     var x=i+1;
-    log(chalk.hex("#4338CA")("Question Number "+x));
+    log(chalk.hex("#4338CA")("\nQuestion Number "+x));
     evaluator(q,op,ans);
   }
 }
@@ -152,5 +152,7 @@ for(i=0;i<highScorers.length;i++){
   }
 }
 if(crossed>0){
-  log(chalk.yellowBright("Congratulations you are among the high Scorers "+emoji.get(":smiley:")))
+  log(chalk.yellowBright("\nCongratulations you are among the high Scorers "+emoji.get(":smiley:")))
 }
+
+log(chalk.hex("#A78BFA")("\nThanks for playing "+userName)+emoji.get("wave"))
