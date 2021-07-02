@@ -131,7 +131,7 @@ function evaluator(question,options,answer){
 }
 
 if(response===false){
-  log(chalk.hex("#064E3B")("Hope you find the time to play the game."+emoji.get(":open_mouth:")))
+  log(chalk.hex("#064E3B")("Hope you find the time to play the game "+emoji.get(":open_mouth:")))
 }else{
   for(i=0;i<trivia.length;i++){
     var q=trivia[i].question;
@@ -143,7 +143,7 @@ if(response===false){
   }
 }
 
-log(chalk.red("Total points scored by "+userName+": "+userScore));
+log(chalk.red("\nTotal points scored by "+userName+": "+userScore));
 
 var crossed=0;
 for(i=0;i<highScorers.length;i++){
